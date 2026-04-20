@@ -1,0 +1,90 @@
+info:
+  name: Настройки почты в организации
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit
+
+docs:
+  content: |-
+    <h2>Настройки почты в организации</h2>
+
+    <p>Общие настройки корпоративной почты можно разделить на несколько групп.</p>
+    <ul>
+    <li>Управляют показом предупреждений о наличии внешних контактов среди получателей или отправителей писем:
+    <ul>
+    <li><code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-sa302hya">show_external_contact_notification_on_compose</code></li>
+    <li><code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-iegv8sas">show_external_contact_notification_on_read</code></li>
+    <li><code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-o6wczydt">friendly_org_users_is_external</code></li>
+    </ul>
+    </li>
+    <li>Отвечают за возможность переключения сотрудниками доменных и почтовых алиасов:
+    <ul>
+    <li><code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-n0bi36pj">lock_employees_default_mail_domain</code></li>
+    </ul>
+    </li>
+    <li>Регулируют работу с почтовым ящикам организации через почтовые программы:
+    <ul>
+    <li><code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-vn26dtrm">enable_imap</code></li>
+    <li><code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-www6q4hd">enable_pop</code></li>
+    </ul>
+    </li>
+    </ul>
+    <div class="yfm-tabs yfm-tabs-accordion" data-diplodoc-group="defaultTabsGroup-fwj1b7m0" data-diplodoc-variant="accordion">
+    <div data-diplodoc-id="про-работу-через-почтовые-программы" data-diplodoc-key="%d0%9f%d1%80%d0%be%20%d1%80%d0%b0%d0%b1%d0%be%d1%82%d1%83%20%d1%87%d0%b5%d1%80%d0%b5%d0%b7%20%d0%bf%d0%be%d1%87%d1%82%d0%be%d0%b2%d1%8b%d0%b5%20%d0%bf%d1%80%d0%be%d0%b3%d1%80%d0%b0%d0%bc%d0%bc%d1%8b" class="yfm-tab yfm-tab-group active" role="tab" aria-controls="72mvunu6" aria-selected="false" tabindex="0" data-diplodoc-is-active="false">Про работу через почтовые программы</div>
+    <div id="72mvunu6" class="yfm-tab-panel active" role="tabpanel" aria-labelledby="про-работу-через-почтовые-программы" data-title="Про работу через почтовые программы" data-diplodoc-forced="true">
+    <p>Работу с почтовым ящикам организации через почтовые программы можно ограничить, если задать параметрам <code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-u0woyvfz">enable_imap</code> и <code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-cxd8x4d7">enable_pop</code> значение <code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-hdemd6dn">false</code>. Это влияет на пользователей с аккаунтами на домене организации следующим образом:</p>
+    <table>
+    <tbody>
+    <tr>
+    <td>
+    <p><strong>Возможность</strong></p>
+    </td>
+    <td>
+    <p><strong>Новые сотрудники</strong></p>
+    </td>
+    <td>
+    <p><strong>Существующие сотрудники</strong></p>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <p>Доступ в почтовый ящик по протоколу IMAP или POP3</p>
+    </td>
+    <td>
+    <p>Нет доступа.</p>
+    </td>
+    <td>
+    <p>Если до установки значения <code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-xdhgekpq">false</code>:</p>
+    <ul>
+    <li>доступ был настроен самим пользователем — доступ останется;</li>
+    <li>доступ не был настроен на стороне пользователя — доступа не будет.</li>
+    </ul>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <p>Наличие в интерфейсе Почты настроек для управления работой с ящиком по IMAP и POP3</p>
+    </td>
+    <td colspan="2">
+    <p>Настройки скрыты — пользователи не видят и не могут самостоятельно их изменять.</p>
+    </td>
+    </tr>
+    </tbody>
+    </table>
+    <p>Параметрами удобно пользоваться во вновь создаваемой организации, в которую еще не добавлены сотрудники. Это позволит полностью исключить работу через почтовые программы со всеми почтовыми ящиками на ее домене.</p>
+    <p>Механизма, который устанавливал бы для уже существующих сотрудников централизованный запрет на работу по IMAP или POP3, пока нет. Чтобы исключить работу через почтовые программы в действующей организации:</p>
+    <ol>
+    <li>Каждый пользователь должен самостоятельно проверить в <a href="https://mail.yandex.ru/#setup/client" target="_blank" rel="noreferrer noopener">настройках Почты</a>, что разрешение на доступ к почтовому ящику по IMAP или POP3 не установлено. В случае, если такое разрешение есть, выключить соответствующие опции.</li>
+    <li>После этого можно задать параметрам значение <code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-1su0af3c">false</code>.</li>
+    </ol>
+
+    <p>Разрешения на использование сервиса, которые доступны при настройке OAuth-приложения:</p>
+    <ul>
+    <li><code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-eiphynyb">ya360_admin:mail_read_organization_settings</code> — чтение настроек почты организации;</li>
+    <li><code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-zui8vxuk">ya360_admin:mail_write_organization_settings</code> — управление настройками почты организации.</li>
+    </ul>
+
+    <a href="https://yandex.ru/dev/api360/doc/ru/mail-settings/">Перейти в Справочник</a>
+  type: text/markdown

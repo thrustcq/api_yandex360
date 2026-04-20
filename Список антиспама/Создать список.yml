@@ -1,0 +1,25 @@
+info:
+  name: Создать список
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/admin/v1/org/{{orgId}}/mail/antispam/allowlist/ips"
+  body:
+    type: json
+    data: |-
+      {
+        "allowList": [ // Список разрешенных IP-адресов и CIDR-подсетей
+          "77.88.21.249",
+          "77.88.54.0/23",
+          "2a02:6b8::/32"
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

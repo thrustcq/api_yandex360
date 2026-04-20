@@ -1,0 +1,21 @@
+info:
+  name: Настройки почты сотрудников
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit
+
+docs:
+  content: |-
+    <h2>Настройки почты сотрудников</h2>
+
+    <p>Сервис для управления настройками почтовых ящиков сотрудников. Работает для пользователей, аккаунты которых созданы на домене организации.</p>
+    <p>Разрешения на использование сервиса, которые доступны при настройке приложения:</p>
+    <ul>
+    <li><code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-vqh0q62t">ya360_admin:mail_read_user_settings</code> — чтение настроек почты пользователя;</li>
+    <li><code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-2zz13xm1">ya360_admin:mail_write_user_settings</code> — управление настройками почты пользователя.</li>
+    </ul>
+
+    <a href="https://yandex.ru/dev/api360/doc/ru/ref/MailUserSettingsService/">Перейти в Справочник</a>
+  type: text/markdown

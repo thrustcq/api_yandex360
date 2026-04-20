@@ -1,0 +1,15 @@
+info:
+  name: Удалить алиас у подразделения
+  type: http
+  seq: 7
+
+http:
+  method: DELETE
+  url: "{{base_url}}/directory/v1/org/{{orgId}}/departments/{{departmentId}}/aliases/{{alias}}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

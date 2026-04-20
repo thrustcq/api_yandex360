@@ -1,0 +1,15 @@
+info:
+  name: Удалить алиас
+  type: http
+  seq: 8
+
+http:
+  method: DELETE
+  url: "{{base_url}}/directory/v1/org/{{orgId}}/users/{{userId}}/aliases/{{alias}}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,22 @@
+info:
+  name: Изменить данные общего ящика
+  type: http
+  seq: 10
+
+http:
+  method: PUT
+  url: "{{base_url}}/admin/v1/org/{{orgId}}/mailboxes/shared/{{resourceId}}"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "example", // Имя
+        "description":"example" // Описание
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

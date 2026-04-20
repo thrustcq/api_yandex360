@@ -1,0 +1,36 @@
+info:
+  name: Удалить участников из группы
+  type: http
+  seq: 3
+
+http:
+  method: PATCH
+  url: "{{base_url}}/directory/v2/org/{{orgId}}/groups/{{groupId}}/members/delete"
+  body:
+    type: json
+    data: |-
+      {
+        "userIds": [ // Идентификаторы сотрудников
+          "1234567890123456",
+          "1234567890123456"
+        ],
+      //  "departmentIds": [ // Идентификаторы подразделений
+      //    0
+      //  ],
+      //  "groupIds": [ // Идентификаторы групп
+      //    0
+      //  ],
+        "externalContactIds": [ // Идентификаторы внешних контактов
+          "123456X7-890X-1X23-4X5X-X6789X01X234"
+        ]
+      //  "sharedMailboxIds": [ // Идентификаторы общих ящиков
+      //    "example"
+      //  ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

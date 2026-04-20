@@ -1,0 +1,46 @@
+info:
+  name: Изменить информацию
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{base_url}}/directory/v1/org/{{orgId}}/users/{{userId}}"
+  body:
+    type: json
+    data: |-
+      {
+        "nickname": "example", // Логин сотрудника
+      //  "departmentId": 0, // Идентификатор подразделения сотрудника
+      //  "name": { // ФИО сотрудника
+      //    "first": "example", // Имя сотрудника
+      //    "last": "example", // Фамилия сотрудника
+      //    "middle": "example" // Отчество сотрудника
+      //  },
+      //  "gender": "example", // Пол сотрудника
+      //  "position": "example", // Должность сотрудника
+      //  "about": "example", // Описание сотрудника
+      //  "birthday": "1999-11-22", // Дата рождения сотрудника
+      //  "contacts": [ // Список контактов сотрудника
+      //    {
+      //      "type": "example", // Тип контакта
+      //      "value": "example", // Значение контакта
+      //      "label": "example" // Произвольная метка контакта
+      //    }
+      //  ],
+      //  "externalId": "example", // Произвольный внешний идентификатор сотрудника
+      //  "isAdmin": true, // Признак администратора организации
+      //  "isEnabled": true, // Статус аккаунта сотрудника
+      //  "timezone": "example", // Часовой пояс сотрудника
+      //  "language": "example", // Язык сотрудника
+      //  "password": "example", // Пароль сотрудника
+      //  "passwordChangeRequired": true, // Обязательность изменения пароля при первом входе
+        "displayName": "example" // Публичное имя сотрудника
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

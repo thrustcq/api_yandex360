@@ -1,0 +1,15 @@
+info:
+  name: Выйти из аккаунта пользователя на всех устройствах
+  type: http
+  seq: 3
+
+http:
+  method: PUT
+  url: "{{base_url}}/security/v1/org/{{orgId}}/domain_sessions/users/{{userId}}/logout"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

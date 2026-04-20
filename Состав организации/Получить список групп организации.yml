@@ -1,0 +1,34 @@
+info:
+  name: Получить список групп организации
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{cloud_url}}/v1/directory/organizations/{{orgId}}/groups"
+  headers:
+    - name: Authorization
+      value: OAuth {{oauth_token}}
+  params:
+    - name: email
+      value: email@example.com
+      type: query
+      disabled: true
+    - name: limit
+      value: "10"
+      type: query
+      disabled: true
+    - name: offset
+      value: "3"
+      type: query
+      disabled: true
+    - name: is_2fa_enabled
+      value: "true"
+      type: query
+      disabled: true
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

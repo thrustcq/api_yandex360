@@ -1,0 +1,36 @@
+info:
+  name: Задать список правил
+  type: http
+  seq: 2
+
+http:
+  method: PUT
+  url: "{{base_url}}/admin/v1/org/{{orgId}}/mail/routing/rules"
+  body:
+    type: json
+    data: |-
+      {
+        "rules": [ // Список правил обработки писем
+          {
+            "condition": { // Условие, которое проверяет соответствие письма текущему правилу
+              "address:from": "spam@example.com"
+            },
+            "actions": [ // Действия, которые необходимо выполнить при срабатывании правила
+              {
+                "action": "drop" // Действие над письмом
+              }
+            ],
+            "scope": { // Параметр, который задает область применения правила
+              "direction": "inbound" // Параметр, который задает, будет ли применяться правило для входящей или для исходящей почты
+            },
+            "terminal": true // Признак, который определяет нужно ли прекратить применение последующих правил при срабатывании данного
+          }
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

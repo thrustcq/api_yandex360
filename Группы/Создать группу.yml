@@ -1,0 +1,30 @@
+info:
+  name: Создать группу
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/directory/v1/org/{{orgId}}/groups"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "example", // Название группы
+        "description": "example", // Описание группы
+        "label": "example", // Имя почтовой рассылки группы
+      //  "externalId": "example", // Произвольный внешний идентификатор группы
+        "members": [ // Массив участников группы
+          {
+            "type": "user", // Тип участника группы
+            "id": "1234567890123456" // Идентификатор участника группы
+          }
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

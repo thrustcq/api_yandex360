@@ -1,0 +1,23 @@
+info:
+  name: Изменить статус 2FA для группы (в разработке)
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{cloud_url}}/v1/directory/organizations/{{orgId}}/groups/{{group_id}}"
+  headers:
+    - name: Authorization
+      value: OAuth {{oauth_token}}
+  body:
+    type: json
+    data: |-
+      {
+        "is_2fa_enabled": true // Статус обязательной двухфакторной аутентификации для группы
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

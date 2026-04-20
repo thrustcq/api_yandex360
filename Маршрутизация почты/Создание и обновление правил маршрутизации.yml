@@ -1,0 +1,36 @@
+info:
+  name: Создание и обновление правил маршрутизации
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{cloud_url}}/v1/mail/organizations/{{orgId}}/routes/set"
+  headers:
+    - name: Authorization
+      value: OAuth {{oauth_token}}
+  body:
+    type: json
+    data: |-
+      {
+        "items": [ // Список правил маршрутизации
+          {
+            "recipient_domain": "example.com", // Домен получателя письма
+            "relay": "mx.example.com", // Адрес почтового сервера
+            "recipient_category": "EXTERNAL_RECIPIENTS", // Категория получателей, для которых необходимо выполнять отправку на заданный адрес почтового сервера
+            "description": "Маршрутизация для внешних получателей" // Описание правила маршрутизации
+          }
+      //    {
+      //      "recipient_domain": "test.org",
+      //      "relay": "mx.test.org",
+      //      "recipient_category": "ALL_RECIPIENTS",
+      //      "description": "Маршрутизация для всех получателей"
+      //    }
+        ]
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

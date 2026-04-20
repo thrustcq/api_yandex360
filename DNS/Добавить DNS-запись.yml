@@ -1,0 +1,34 @@
+info:
+  name: Добавить DNS-запись
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/directory/v1/org/{{orgId}}/domains/{{domain}}/dns"
+  body:
+    type: json
+    data: |-
+      {
+        "type": "A", // Тип DNS-записи
+        "name": "example", // Имя записи
+        "ttl": 0, // Время жизни записи в секундах
+        "address": "example", // Адрес для записи А или ААА
+        "target": "example", // Цель для записи CNAME или SRV
+        "exchange": "example", // EXCHANGE для MX-записи
+        "preference": 0, // PREFERENCE для MX-записи
+        "text": "example", // Содержимое для TXT-записи
+        "port": 0, // Порт для SRV-записи
+        "priority": 0, // Приоритет для SRV-записи
+        "weight": 0, // Вес для SRV-записи
+        "flag": 0, // Флаг для CAA-записи
+        "tag": "example", // Тег для CAA-записи
+        "value": "example" // CAA-запись, заключенная в двойные кавычки
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

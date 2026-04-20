@@ -1,0 +1,31 @@
+info:
+  name: Изменить список разрешенных отправителей рассылок на группы и подразделения
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{cloud_url}}/v1/admin/org/{{orgId}}/mail-lists/{{email_id}}/update-permissions"
+  headers:
+    - name: Authorization
+      value: OAuth {{oauth_token}}
+  body:
+    type: json
+    data: |-
+      {  
+          "role_actions": [{ // Массив операций с разрешениями RoleAction
+            "type": "grant", // Тип операции
+            "roles": ["mail_list_sender"],  // Всегда
+            "subjects": [{ // Массив объектов Subject с информацией о субъектах, имеющих разрешение
+              "type": "user", // Тип субъекта
+              "id": 1234567890123456, // Идентификатор субъекта
+              "org_id": 1234567 // Идентификатор организации
+              }]
+          }]
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

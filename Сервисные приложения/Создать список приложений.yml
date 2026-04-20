@@ -1,0 +1,28 @@
+info:
+  name: Создать список приложений
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/security/v1/org/{{orgId}}/service_applications"
+  body:
+    type: json
+    data: |-
+      {
+        "applications": [ // Список сервисных приложений
+          {
+            "id": "example", // Идентификатор приложения
+            "scopes": [ // Список доступов приложения
+              "example"
+            ]
+          }
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

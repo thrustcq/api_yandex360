@@ -1,0 +1,46 @@
+info:
+  name: Задать список правил
+  type: http
+  seq: 2
+
+http:
+  method: PUT
+  url: "{{base_url}}/admin/v1/org/{{orgId}}/mail/routing/policies"
+  body:
+    type: json
+    data: |-
+      {
+        "rules": [ // Список правил доменной политики
+          {
+            "name": "example", // Название правила
+            "description": "example", // Описание правила
+            "enabled": false, // Признак активности правила
+            "condition": { // Условие, при выполнении которого применяется правило
+      //        "ip_filter": { // Список IP
+      //          "list": [ // Перечень элементов списка заданного фильтра
+      //            null
+      //          ]
+      //        },
+              "domain_filter": { // Список доменов
+                "list": [
+                        "*.com"
+                        ]
+              }
+      //        "email_from_filter": null // Список электронных адресов
+            },
+            "action": { // Действие над письмом, предусмотренное правилом
+              "type": "accept", // Действие над письмом, выполняемое при срабатывании правила
+              "options": { // Дополнительные настройки действия над письмом
+                "force": "spam" // Отметка письма
+              }
+            }
+          }
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

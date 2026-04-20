@@ -1,0 +1,22 @@
+info:
+  name: Изменить параметры парольной политики
+  type: http
+  seq: 2
+
+http:
+  method: PUT
+  url: "{{base_url}}/security/v1/org/{{orgId}}/domain_passwords"
+  body:
+    type: json
+    data: |-
+      {
+        "enabled": true, // Разрешить пользователям менять пароль
+        "changeFrequency": 0 // Ограничить срок действия пароля (дни). Параметр также задает контроль сложности нового пароля
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

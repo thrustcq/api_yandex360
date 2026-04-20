@@ -1,0 +1,21 @@
+info:
+  name: Изменить статус автоматического сбора контактов
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/admin/v1/org/{{orgId}}/mail/users/{{userId}}/settings/address_book"
+  body:
+    type: json
+    data: |-
+      {
+        "collectAddresses": true // Автоматически собирать контакты
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

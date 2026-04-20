@@ -1,0 +1,17 @@
+info:
+  name: Проверить статус задачи на изменение прав доступа
+  type: http
+  seq: 12
+
+http:
+  method: GET
+  url: "{{base_url}}/admin/v1/org/{{orgId}}/mailboxes/tasks/{{taskId}}"
+  headers:
+    - name: Authorization
+      value: OAuth {{oauth_token}}
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

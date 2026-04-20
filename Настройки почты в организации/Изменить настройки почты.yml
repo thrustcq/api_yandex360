@@ -1,0 +1,34 @@
+info:
+  name: Изменить настройки почты
+  type: http
+  seq: 2
+
+http:
+  method: PATCH
+  url: "{{cloud_url}}/v1/admin/org/{{orgId}}/mail-settings"
+  headers:
+    - name: Authorization
+      value: OAuth {{oauth_token}}
+  body:
+    type: json
+    data: |-
+      {
+      //  "enable_imap": true,
+        "enable_pop": false
+        
+      //  "friendly_org_users_is_external": false, // Приравнивать ли к внешним контактам сотрудников организаций, связанных с вашей организацией в федерацию
+        
+      //  "lock_employees_default_mail_domain": false, // Установить ли запрет для сотрудников на переключение доменных и почтовых алиасов. При включенном запрете сотрудники не могут выбирать адрес отправителя для почтовых ящиков, которые имеют дополнительные адреса
+        
+      //  "show_external_contact_notification_on_compose": true, // Предупреждать ли о том, что среди получателей создаваемых писем есть внешние контакты
+        
+      //  "show_external_contact_notification_on_read": true, // Предупреждать ли о том, что среди отправителей входящих писем есть внешние контакты
+        
+      //  "force_default_display_name": false // В разработке
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

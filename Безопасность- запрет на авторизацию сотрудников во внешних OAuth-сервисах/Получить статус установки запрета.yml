@@ -1,0 +1,15 @@
+info:
+  name: Получить статус установки запрета
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{base_url}}/security/v1/org/{{orgId}}/oauth_access_restriction"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

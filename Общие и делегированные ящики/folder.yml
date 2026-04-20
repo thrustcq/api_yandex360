@@ -1,0 +1,74 @@
+info:
+  name: Общие и делегированные ящики
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit
+
+docs:
+  content: |-
+    <h2>Общие и делегированные ящики</h2>
+
+    <p>Сервис для управления доступом пользователей к общим ящикам и к делегированным ящикам других сотрудников.</p>
+    <p>Возможность использования общих и делегированных ящиков есть не во всех тарифах Яндекс 360 для бизнеса. Описание тарифов приведено в <a href="https://yandex.ru/support/yandex-360/business/purchase/ru/plans/" target="_blank" rel="noreferrer noopener">Справке по тарифам и оплате</a>.</p>
+    <p>Разрешения на использование сервиса:</p>
+    <ul>
+    <li><code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-7xngxodl">ya360_admin:mail_write_shared_mailbox_inventory</code> — управление правами доступа к почтовым ящикам;</li>
+    <li><code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-08fmb2jd">ya360_admin:mail_read_shared_mailbox_inventory</code> — чтение информации о правах доступа к почтовым ящикам.</li>
+    </ul>
+    <p><strong>Ограничения для общих и делегированных ящиков:</strong></p>
+    <ul>
+    <li>Лимиты:</li>
+    </ul>
+    <table>
+    <tbody>
+    <tr>
+    <td class="cell-align-center">
+    <p><strong>Параметр</strong></p>
+    </td>
+    <td>
+    <p class="cell-align-center" width="20%"><strong>Делегированные ящики</strong></p>
+    </td>
+    <td>
+    <p class="cell-align-center" width="20%"><strong>Общие ящики</strong></p>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <p>Количество ящиков в организации</p>
+    </td>
+    <td class="cell-align-center">
+    <p align="center">2500</p>
+    </td>
+    <td class="cell-align-center">
+    <p align="center">2500</p>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <p>Количество ящиков, к которым может иметь доступ один пользователь</p>
+    </td>
+    <td class="cell-align-center" colspan="2">
+    <p align="center">40 (общий лимит)</p>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <p>Количество пользователей, которые могут иметь доступ к одному ящику</p>
+    </td>
+    <td class="cell-align-center">
+    <p align="center">40</p>
+    </td>
+    <td class="cell-align-center">
+    <p align="center">40</p>
+    </td>
+    </tr>
+    </tbody>
+    </table>
+    <ul>
+    <li>Групповые операции на предоставление доступов: пока не поддерживаются. За один запрос можно предоставить, изменить или удалить право доступа только для одного сотрудника к одному почтовому ящику. Но вы можете одновременно направить несколько таких запросов.</li>
+    </ul>
+
+    <a href="https://yandex.ru/dev/api360/doc/ru/ref/MailboxService/">Перейти в Справочник</a>
+  type: text/markdown

@@ -1,0 +1,30 @@
+info:
+  name: Изменить параметры группы
+  type: http
+  seq: 5
+
+http:
+  method: PATCH
+  url: "{{base_url}}/directory/v1/org/{{orgId}}/groups/{{groupId}}"
+  body:
+    type: json
+    data: |-
+      {
+      //  "name": "example", // Название группы
+        "description": "example" // Описание группы
+      //  "label": "example", // Имя почтовой рассылки группы
+      //  "externalId": "example", // Произвольный внешний идентификатор группы
+      //  "members": [ // Массив участников группы
+      //    {
+      //      "type": "user", // Тип участника группы
+      //      "id": "example" // Идентификатор участника группы
+      //    }
+      //  ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

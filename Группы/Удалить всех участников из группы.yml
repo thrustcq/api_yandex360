@@ -1,0 +1,15 @@
+info:
+  name: Удалить всех участников из группы
+  type: http
+  seq: 9
+
+http:
+  method: DELETE
+  url: "{{base_url}}/directory/v1/org/{{orgId}}/groups/{{groupId}}/members"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

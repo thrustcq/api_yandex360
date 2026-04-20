@@ -1,0 +1,44 @@
+info:
+  name: Добавить
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/directory/v1/org/{{orgId}}/users"
+  body:
+    type: json
+    data: |-
+      {
+        "nickname": "example", // Логин сотрудника
+        "departmentId": 1, // Идентификатор подразделения, в котором состоит сотрудник
+        "name": { // ФИО сотрудника
+          "first": "example", // Имя сотрудника
+          "last": "example", // Фамилия сотрудника
+          "middle": "example" // Отчество сотрудника
+        },
+        "gender": "male", // Пол сотрудника
+        "position": "example", // Должность сотрудника
+        "about": "example", // Описание сотрудника
+        "birthday": "1999-11-22", // Дата рождения сотрудника
+      //  "contacts": [ // Список контактов сотрудника
+      //    {
+      //      "type": "example", // Тип контакта
+      //      "value": "example", // Значение контакта
+      //      "label": "example" // Произвольная метка контакта
+      //    }
+      //  ],
+      //  "externalId": "example", // Произвольный внешний идентификатор сотрудника
+      //  "timezone": "example", // Часовой пояс сотрудника
+        "language": "ru", // Язык сотрудника
+        "password": "QwErTy1@3", // Пароль сотрудника
+        "passwordChangeRequired": true, // Обязательность изменения пароля при первом входе
+        "displayName": "example" // Публичное имя сотрудника
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

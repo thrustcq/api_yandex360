@@ -1,0 +1,25 @@
+info:
+  name: Изменить параметры подразделения
+  type: http
+  seq: 5
+
+http:
+  method: PATCH
+  url: "{{base_url}}/directory/v1/org/{{orgId}}/departments/{{departmentId}}"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "example", // Название подразделения
+      //  "parentId": 0, // Идентификатор родительского подразделения
+        "description": "example" // Описание подразделения
+      //  "externalId": "example", // Произвольный внешний идентификатор подразделения
+      //  "label": "example" // Имя почтовой рассылки подразделения
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

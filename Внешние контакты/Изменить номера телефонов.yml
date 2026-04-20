@@ -1,0 +1,27 @@
+info:
+  name: Изменить номера телефонов
+  type: http
+  seq: 7
+
+http:
+  method: PUT
+  url: "{{base_url}}/directory/v1/org/{{orgId}}/external_contacts/{{contactId}}/phones"
+  body:
+    type: json
+    data: |-
+      {
+        "phones": [ // Массив телефонов
+          {
+            "phone": "77777777777", // Телефон
+            "type": "work", // Тип телефона
+            "main": true // Признак основного телефона
+          }
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

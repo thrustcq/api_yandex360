@@ -1,0 +1,17 @@
+info:
+  name: Получить список разрешенных отправителей рассылок на группы и подразделения
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{cloud_url}}/v1/admin/org/{{orgId}}/mail-lists/{{mail_list_id}}/permissions"
+  headers:
+    - name: Authorization
+      value: OAuth {{oauth_token}}
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

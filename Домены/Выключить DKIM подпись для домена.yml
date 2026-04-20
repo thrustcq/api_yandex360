@@ -1,0 +1,18 @@
+info:
+  name: Выключить DKIM подпись для домена
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{base_url}}/directory/v1/org/{{orgId}}/domains/{{domain}}/dkim/disable"
+  body:
+    type: json
+    data: "{}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

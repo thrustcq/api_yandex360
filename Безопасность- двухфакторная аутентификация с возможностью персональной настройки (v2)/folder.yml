@@ -1,0 +1,26 @@
+info:
+  name: "Безопасность: двухфакторная аутентификация с возможностью персональной настройки (v2)"
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit
+
+docs:
+  content: |-
+    <h2>Безопасность: двухфакторная аутентификация с возможностью персональной настройки (v2)</h2>
+
+    <p>Сервис для управления обязательной двухфакторной аутентификацией (2FA) с возможностью ее настройки как сразу для всех пользователей с аккаунтами на домене организации (режим <code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-gmya5dhw">per_domain</code>), так и выборочно для отдельных сотрудников (режим <code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-il41mq2r">per_user</code>).</p>
+    </div></div><details class="yfm-cut"><summary class="yfm-cut-title">Что будет при смене режима 2FA с <code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-9rsukx43">per_domain</code> на <code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-ppli9jz2">per_user</code></summary><div class="yfm-cut-content"><ul>
+    <li>У пользователей, которые самостоятельно включали себе двухфакторную аутентификацию еще до настройки принудительной 2FA в режиме <code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-16ibqei2">per_domain</code>, она останется включенной.</li>
+    <li>У остальных пользователей двухфакторная аутентификация будет выключена.</li>
+    </ul>
+    <p>В режиме <code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-7ethiw7a">per_user</code> пользователи могут самостоятельно включать и выключать себе 2FA в настройках безопасности Яндекс ID.</p>
+    <hr>
+    </div></details><p>Права доступа, необходимые приложению для работы с двухфакторной аутентификацией:</p>
+    <ul>
+    <li><code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-ezcgn80s">ya360_security:domain_2fa_write</code> — управление обязательной двухфакторной аутентификацией для пользователей.</li>
+    </ul>
+
+    <a href="https://yandex.ru/dev/api360/doc/ru/ref/Domain2FAV2Service/">Перейти в Справочник</a>
+  type: text/markdown

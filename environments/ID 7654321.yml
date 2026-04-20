@@ -1,0 +1,44 @@
+name: ID 7654321
+variables:
+  - name: orgId
+    value: "7654321"
+  - secret: true
+    name: oauth_token
+  - name: userId
+    value: "1234567890123456"
+  - name: base_url
+    value: https://api360.yandex.net
+  - name: resourceId
+    value: "1234567890123456"
+  - name: actorId
+    value: "1234567890123456"
+  - name: cloud_url
+    value: https://cloud-api.yandex.net
+  - name: mail_list_id
+    value: "1234567890123456"
+  - name: group_id
+    value: "10"
+  - name: department_id
+    value: "10"
+  - name: contactId
+    value: 123456X7-890X-1X23-4X5X-X6789X01X234
+  - name: groupId
+    value: "10"
+  - name: type
+    value: user
+  - name: id
+    value: "1234567890123456"
+  - name: domain
+    value: example.com
+  - name: ruleId
+    value: "123456"
+  - name: taskId
+    value: "123456789"
+  - name: departmentId
+    value: "10"
+  - name: alias
+    value: api
+  - name: email_id
+    value: "1234567890123456"
+  - name: recordId
+    value: "12345678"

@@ -1,0 +1,15 @@
+info:
+  name: Удалить DNS-запись
+  type: http
+  seq: 4
+
+http:
+  method: DELETE
+  url: "{{base_url}}/directory/v1/org/{{orgId}}/domains/{{domain}}/dns/{{recordId}}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

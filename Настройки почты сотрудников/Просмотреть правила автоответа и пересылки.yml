@@ -1,0 +1,15 @@
+info:
+  name: Просмотреть правила автоответа и пересылки
+  type: http
+  seq: 5
+
+http:
+  method: GET
+  url: "{{base_url}}/admin/v1/org/{{orgId}}/mail/users/{{userId}}/settings/user_rules"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

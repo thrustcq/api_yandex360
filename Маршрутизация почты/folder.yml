@@ -1,0 +1,65 @@
+info:
+  name: Маршрутизация почты
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit
+
+docs:
+  content: |-
+    <h2>Маршрутизация почты</h2>
+
+    <p>Правила маршрутизации позволяют администратору организации настраивать отправку исходящих писем:</p>
+    <ol>
+    <li>
+    <p>Принудительно отправлять письма на указанный адрес почтового сервера для заданных доменов.</p>
+    </li>
+    <li>
+    <p>Выбирать маршрут отправки для заданных доменов в зависимости от типа получателя:</p>
+    <ul>
+    <li>на указанный адрес почтового сервера;</li>
+    <li>Яндекс-получателям (определяется по UID в blackbox).</li>
+    </ul>
+    </li>
+    <li>
+    <p>Принудительно отправлять все исходящие письма организации на указанный адрес почтового сервера.</p>
+    </li>
+    <li>
+    <p>Принудительно отправлять письма внешним получателям на указанный адрес почтового сервера.</p>
+    </li>
+    </ol>
+    <p>В одном правиле можно указать только один адрес почтового сервера.</p>
+    <h2 id="restrictions"><a href="ru/routing/#restrictions" class="yfm-anchor yfm-clipboard-anchor" aria-hidden="true"></a>Ограничения и приоритеты</h2>
+    <ul>
+    <li>
+    <p>Для организации допустимо только одно правило, охватывающее все исходящие письма. Чтобы создать или удалить такое правило, укажите в качестве домена получателя пустую строку (<code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-k3ftgil2">&quot;&quot;</code>).</p>
+    </li>
+    <li>
+    <p>Правила с указанным доменом имеют приоритет над правилом с пустым доменом.</p>
+    </li>
+    <li>
+    <p>Приоритет работает следующим образом:</p>
+    <ul>
+    <li>если домен получателя совпадает с доменом в правиле — письмо отправляется по этому правилу;</li>
+    <li>если совпадений нет — применяется правило с пустым доменом (<code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-vksveome">&quot;&quot;</code>).</li>
+    </ul>
+    </li>
+    </ul>
+    <h2 id="domain-handling"><a href="ru/routing/#domain-handling" class="yfm-anchor yfm-clipboard-anchor" aria-hidden="true"></a>Обработка доменов</h2>
+    <p>Все операции с правилами выполняются на основе IDN-представления доменов.</p>
+    <p>Следующие варианты записи считаются идентичными:</p>
+    <ul>
+    <li><code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-9uk5p9o0">домен0.орг</code></li>
+    <li><code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-qb0x47yn">ДОМЕН0.ОРГ</code></li>
+    <li><code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-vnfbr3pc">xn--0-gtbd1agd.xn--c1avg</code></li>
+    </ul>
+    <h2 id="permissions"><a href="ru/routing/#permissions" class="yfm-anchor yfm-clipboard-anchor" aria-hidden="true"></a>Разрешения</h2>
+    <p>Разрешения на использование сервиса, которые доступны при настройке приложения:</p>
+    <ul>
+    <li><code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-378zbn4e">ya360_admin:mail_read_domain_routes</code> — для просмотра правил маршрутизации;</li>
+    <li><code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-nsg461tn">ya360_admin:mail_write_domain_routes</code> — для создания, обновления и удаления правил.</li>
+    </ul>
+
+    <a href="https://yandex.ru/dev/api360/doc/ru/routing/">Перейти в Справочник</a>
+  type: text/markdown

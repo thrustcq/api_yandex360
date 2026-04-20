@@ -1,0 +1,17 @@
+info:
+  name: Посмотреть список ящиков, доступных сотруднику
+  type: http
+  seq: 5
+
+http:
+  method: GET
+  url: "{{base_url}}/admin/v1/org/{{orgId}}/mailboxes/resources/{{actorId}}"
+  headers:
+    - name: Authorization
+      value: OAuth {{oauth_token}}
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,22 @@
+info:
+  name: Группы (v2)
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit
+
+docs:
+  content: |-
+    <h2>Группы (v2)</h2>
+
+    <p>Дополнительный сервис для работы с группами, в которых могут содержаться внешние контакты.</p>
+    <p>Методы v2 применяются для действий над участниками группы — добавление, просмотр, удаление. Для работы с самими группами (создание, удаление, просмотр списка групп), их параметрами (просмотр и изменение), а также руководителями (изменение и удаление) используются стандартные методы, даже если в группах содержатся внешние контакты.</p>
+    <p>Права доступа для работы с группами:</p>
+    <ul>
+    <li><code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-tet9z5di">directory:read_groups</code> — просмотр;</li>
+    <li><code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-mxq0xhw9">directory:write_groups</code> — просмотр и изменение.</li>
+    </ul>
+
+    <a href="https://yandex.ru/dev/api360/doc/ru/ref/GroupV2Service/">Перейти в Справочник</a>
+  type: text/markdown

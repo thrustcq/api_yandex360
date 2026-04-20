@@ -1,0 +1,30 @@
+info:
+  name: Удаление правил маршрутизации
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{cloud_url}}/v1/mail/organizations/{{orgId}}/routes/remove"
+  headers:
+    - name: Authorization
+      value: OAuth {{oauth_token}}
+  body:
+    type: json
+    data: |-
+      {
+        "items": [ // Список доменов для удаления
+          {
+            "recipient_domain": "example.com" // Домен получателя письма
+          }
+      //    {
+      //      "recipient_domain": "test.org"
+      //    }
+        ]
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

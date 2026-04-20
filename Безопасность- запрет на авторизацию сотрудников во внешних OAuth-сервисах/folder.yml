@@ -1,0 +1,22 @@
+info:
+  name: "Безопасность: запрет на авторизацию сотрудников во внешних OAuth-сервисах"
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit
+
+docs:
+  content: |-
+    <h2>Безопасность: запрет на авторизацию сотрудников во внешних OAuth-сервисах</h2>
+
+    <p>Сервис для установки или отключения всем сотрудникам организации, аккаунты которых находятся на ее домене, запрета на авторизацию во внешних OAuth-сервисах. Это позволяет исключить вход сотрудников в сторонние программы и приложения с рабочими аккаунтами.</p>
+    <p>По умолчанию такой запрет не установлен.</p>
+    <p>Разрешения на использование:</p>
+    <ul>
+    <li><code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-wf399kjb">ya360_security:domain_settings_read</code> — чтение информации о настройках безопасности организации;</li>
+    <li><code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-j80gr3b1">ya360_security:domain_settings_write</code> — управление настройками безопасности организации.</li>
+    </ul>
+
+    <a href="https://yandex.ru/dev/api360/doc/ru/ref/OauthAccessRestrictionsService/">Перейти в Справочник</a>
+  type: text/markdown

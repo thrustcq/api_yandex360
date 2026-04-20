@@ -1,0 +1,20 @@
+info:
+  name: Аудит-логи
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit
+
+docs:
+  content: |-
+    <h2>Аудит-логи</h2>
+
+    <p>Метод получения истории событий организации с возможностью фильтрации и постраничной навигации.</p>
+
+    <p>Разрешение на использование сервиса:</p>
+    <p><code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-e87p1ng6">ya360_security:read_auditlog</code> — чтение событий аудит-лога организации.</p>
+
+
+    <a href="https://yandex.ru/dev/api360/doc/ru/audit-logs/">Перейти в Справочник</a>
+  type: text/markdown

@@ -1,0 +1,33 @@
+info:
+  name: Изменить основной адрес и подписи
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{base_url}}/admin/v1/org/{{orgId}}/mail/users/{{userId}}/settings/sender_info"
+  body:
+    type: json
+    data: |-
+      {
+        "fromName": "example" // Имя отправителя
+      //  "defaultFrom": "email@example.com", // Отправлять письма с адреса
+      //  "signs": [ // Подписи
+      //    {
+      //      "emails": [ // Привязать к адресу
+      //        "example"
+      //      ],
+      //      "isDefault": true, // Является ли подписью по умолчанию
+      //      "text": "example", // Текст подписи, поддерживает разметку html, в том числе изображения
+      //      "lang": "example" // Язык подписи
+      //    }
+      //  ],
+      //  "signPosition": "bottom" // Расположение подписи
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

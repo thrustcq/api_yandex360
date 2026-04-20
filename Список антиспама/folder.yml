@@ -1,0 +1,21 @@
+info:
+  name: Список антиспама
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit
+
+docs:
+  content: |-
+    <h2>Список антиспама</h2>
+
+    <p>Сервис для работы с настройками антиспама. Задает список IP-адресов и CIDR-подсетей, письма от которых не будут расцениваться Спамообороной Почты как спам.</p>
+    <p>Разрешения на использование сервиса, которые доступны при настройке приложения:</p>
+    <ul>
+    <li><code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-3y48dig4">ya360_admin:mail_read_antispam_settings</code> — чтение настроек антиспама;</li>
+    <li><code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-g4bmy4nd">ya360_admin:mail_write_antispam_settings</code> — управление настройками антиспама (чтение и запись).</li>
+    </ul>
+
+    <a href="https://yandex.ru/dev/api360/doc/ru/ref/MailAntispamIpAllowlistService/">Перейти в Справочник</a>
+  type: text/markdown

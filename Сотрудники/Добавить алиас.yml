@@ -1,0 +1,21 @@
+info:
+  name: Добавить алиас
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{base_url}}/directory/v1/org/{{orgId}}/users/{{userId}}/aliases"
+  body:
+    type: json
+    data: |-
+      {
+        "alias": "example" // Алиас почтового ящика сотрудника
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

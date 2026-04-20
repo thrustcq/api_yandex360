@@ -1,0 +1,24 @@
+info:
+  name: Посмотреть список делегированных ящиков
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{base_url}}/admin/v1/org/{{orgId}}/mailboxes/delegated"
+  params:
+    - name: page
+      value: "2"
+      type: query
+      disabled: true
+    - name: perPage
+      value: "3"
+      type: query
+      disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

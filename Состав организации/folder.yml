@@ -1,0 +1,40 @@
+info:
+  name: Состав организации
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit
+
+docs:
+  content: |-
+    <h2>Состав организации</h2>
+
+    <p>Разрешения на использование сервиса, которое доступно при настройке приложения:</p>
+    <ul>
+    <li>
+    <p><strong>Для получения данных пользователей</strong></p>
+    <p>Одно из разрешений:</p>
+    <ul>
+    <li><code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-pyjtiihg">directory:read_users</code> — просмотр данных пользователей;</li>
+    <li><code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-00ayssi7">directory:write_users</code> — просмотр и изменение данных пользователей.</li>
+    </ul>
+    </li>
+    <li>
+    <p><strong>Для работы с данными групп</strong></p>
+    <ul>
+    <li><code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-oxdujgan">directory:read_groups</code> — просмотр данных групп;</li>
+    <li><code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-4hlv5umr">directory:write_groups</code> — просмотр и изменение данных групп.</li>
+    </ul>
+    </li>
+    <li>
+    <p><strong>Для работы с данными подразделений</strong></p>
+    <ul>
+    <li><code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-pctgihef">directory:read_departments</code> — просмотр данных подразделений;</li>
+    <li><code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-ox84pyt9">directory:write_departments</code> — просмотр и изменение данных подразделений.</li>
+    </ul>
+    </li>
+    </ul>
+
+    <a href="https://yandex.ru/dev/api360/doc/ru/directory/">Перейти в Справочник</a>
+  type: text/markdown

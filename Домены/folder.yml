@@ -1,0 +1,21 @@
+info:
+  name: Домены
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit
+
+docs:
+  content: |-
+    <h2>Домены</h2>
+
+    <p>Сервис для работы с доменами. Просмотр, создание, изменение и удаление доменов, получение статуса подключения и списка настроек.</p>
+    <p>Права доступа для работы с доменами:</p>
+    <ul>
+    <li><code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-trdh4q2j">directory:read_domains</code> — просмотр;</li>
+    <li><code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-3o4o5l0f">directory:write_domains</code> — просмотр и изменение.</li>
+    </ul>
+
+    <a href="https://yandex.ru/dev/api360/doc/ru/ref/DomainService/">Перейти в Справочник</a>
+  type: text/markdown

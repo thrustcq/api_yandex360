@@ -1,0 +1,27 @@
+info:
+  name: Изменить описание контакта
+  type: http
+  seq: 5
+
+http:
+  method: PATCH
+  url: "{{base_url}}/directory/v1/org/{{orgId}}/external_contacts/{{contactId}}"
+  body:
+    type: json
+    data: |-
+      {
+      //  "firstName": "example", // Имя
+      //  "lastName": "example", // Фамилия
+      //  "middleName": "example", // Отчество
+        "title": "example", // Должность
+      //  "company": "example", // Компания
+      //  "department": "example", // Подразделение
+        "address": "example" // Почтовый адрес
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

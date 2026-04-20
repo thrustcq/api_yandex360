@@ -1,0 +1,15 @@
+info:
+  name: Просмотреть контакт
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{base_url}}/directory/v1/org/{{orgId}}/external_contacts/{{contactId}}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

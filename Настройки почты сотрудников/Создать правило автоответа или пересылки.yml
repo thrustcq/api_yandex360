@@ -1,0 +1,29 @@
+info:
+  name: Создать правило автоответа или пересылки
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{base_url}}/admin/v1/org/{{orgId}}/mail/users/{{userId}}/settings/user_rules"
+  body:
+    type: json
+    data: |-
+      {
+        "autoreply": { // Автоответ
+          "ruleName": "example", // Название правила
+          "text": "example" // Текст автоответа
+        }
+      //  "forward": { // Пересылка
+      //    "ruleName": "example", // Название правила
+      //    "address": "example", // Email получателя пересылаемого письма
+      //    "withStore": true // Признак того, нужно ли сохранять копию письма в ящике исходного получателя
+      //  }
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

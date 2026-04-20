@@ -1,0 +1,23 @@
+info:
+  name: Изменить статус 2FA для подразделения (в разработке)
+  type: http
+  seq: 7
+
+http:
+  method: PATCH
+  url: "{{cloud_url}}/v1/directory/organizations/{{orgId}}/departments/{{department_id}}"
+  headers:
+    - name: Authorization
+      value: OAuth {{oauth_token}}
+  body:
+    type: json
+    data: |-
+      {
+        "is_2fa_enabled": false // Статус обязательной двухфакторной аутентификации для подразделения
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

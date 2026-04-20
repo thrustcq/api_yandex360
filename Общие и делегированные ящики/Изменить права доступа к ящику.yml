@@ -1,0 +1,43 @@
+info:
+  name: Изменить права доступа к ящику
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{base_url}}/admin/v1/org/{{orgId}}/mailboxes/set/{{resourceId}}?actorId=1234567890123456"
+  params:
+    - name: actorId
+      value: "1234567890123456"
+      type: query
+    - name: notify
+      value: none
+      type: query
+      disabled: true
+  body:
+    type: json
+    data: |-
+      {
+        "roles": [ //Список ролей, на которые назначается сотрудник
+      //    "shared_mailbox_reader", //просмотр ящика в веб-интерфейсе
+          
+      //    "shared_mailbox_editor", //редактирование ящика в веб-интерфейсе
+          
+      //    "shared_mailbox_admin", //управление ящиком в веб-интерфейсе
+          
+          "shared_mailbox_imap_admin", //управление ящиком по IMAP
+          
+          "shared_mailbox_sender" //отправка писем
+          
+      //    "shared_mailbox_half_sender", //ограниченная отправка только по SMTP
+          
+      //    "shared_mailbox_owner" //полные права на ящик
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

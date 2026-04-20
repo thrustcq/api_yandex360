@@ -1,0 +1,21 @@
+info:
+  name: "Безопасность: управление паролями"
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit
+
+docs:
+  content: |-
+    <h2>Безопасность: управление паролями</h2>
+
+    <p>Сервис для управления параметрами паролей пользователей организации.</p>
+    <p>Разрешения на использование сервиса, которые доступны при настройке приложения:</p>
+    <ul>
+    <li><code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-alsog3xz">ya360_security:domain_passwords_read</code> — чтение информации о параметрах паролей пользователей;</li>
+    <li><code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-ag5jn4s6">ya360_security:domain_passwords_write</code> — управление параметрами паролей пользователей.</li>
+    </ul>
+
+    <a href="https://yandex.ru/dev/api360/doc/ru/ref/DomainPasswordsService/">Перейти в Справочник</a>
+  type: text/markdown

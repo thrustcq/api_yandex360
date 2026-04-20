@@ -1,0 +1,23 @@
+info:
+  name: Включить 2FA
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/security/v1/org/{{orgId}}/domain_2fa"
+  body:
+    type: json
+    data: |-
+      {
+        "duration": 259200, // Период в секундах
+        "logoutUsers": false, // Нужно ли закрывать сессии всех пользователей
+        "validationMethod": "default" // Метод, которым будет проверяться второй фактор
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

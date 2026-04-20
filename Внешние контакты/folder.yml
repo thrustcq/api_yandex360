@@ -1,0 +1,21 @@
+info:
+  name: Внешние контакты
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit
+
+docs:
+  content: |-
+    <h2>Внешние контакты</h2>
+
+    <p>Сервис для работы с внешними контактами (владельцами электронных адресов за пределами вашей организации). Просмотр, создание, изменение и удаление.</p>
+    <p>Права доступа для работы с внешними контактами:</p>
+    <ul>
+    <li><code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-0wr7geho">directory:read_external_contacts</code> — просмотр;</li>
+    <li><code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-z94h7wi2">directory:write_external_contacts</code> — просмотр и изменение.</li>
+    </ul>
+
+    <a href="https://yandex.ru/dev/api360/doc/ru/ref/ExternalContactService/">Перейти в Справочник</a>
+  type: text/markdown

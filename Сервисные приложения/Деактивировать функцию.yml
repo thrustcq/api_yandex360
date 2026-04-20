@@ -1,0 +1,15 @@
+info:
+  name: Деактивировать функцию
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{base_url}}/security/v1/org/{{orgId}}/service_applications/deactivate"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

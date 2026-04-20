@@ -1,0 +1,30 @@
+info:
+  name: Изменить список участников группы
+  type: http
+  seq: 7
+
+http:
+  method: PUT
+  url: "{{base_url}}/directory/v1/org/{{orgId}}/groups/{{groupId}}/members"
+  body:
+    type: json
+    data: |-
+      {
+        "members": [ // Массив участников группы
+          {
+            "type": "user", // Тип участника группы
+            "id": "1234567890123456" // Идентификатор участника группы
+          },
+          {
+            "type": "user",
+            "id": "1234567890123456"
+          }
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

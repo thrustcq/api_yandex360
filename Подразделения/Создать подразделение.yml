@@ -1,0 +1,25 @@
+info:
+  name: Создать подразделение
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/directory/v1/org/{{orgId}}/departments"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "example", // Название подразделения
+        "parentId": 1, // Идентификатор родительского подразделения
+        "description": "example", // Описание подразделения
+      //  "externalId": "example", // Произвольный внешний идентификатор подразделения
+        "label": "example" // Имя почтовой рассылки подразделения
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

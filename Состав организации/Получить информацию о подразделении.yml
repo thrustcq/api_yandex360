@@ -1,0 +1,17 @@
+info:
+  name: Получить информацию о подразделении
+  type: http
+  seq: 6
+
+http:
+  method: GET
+  url: "{{cloud_url}}/v1/directory/organizations/{{orgId}}/departments/{{department_id}}"
+  headers:
+    - name: Authorization
+      value: OAuth {{oauth_token}}
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

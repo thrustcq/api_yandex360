@@ -1,0 +1,22 @@
+info:
+  name: Сервисные приложения
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit
+
+docs:
+  content: |-
+    <h2>Сервисные приложения</h2>
+
+    <p>Инструмент для работы с сервисными приложениями. Доступен только владельцу организации.</p>
+    <p>Перед использованием убедитесь, что ваш <a href="https://yandex.ru/support/yandex-360/business/purchase/ru/plans/" target="_blank" rel="noreferrer noopener">тариф</a> позволяет управлять сервисными приложениями в организации.</p>
+    <p>Необходимые права доступа:</p>
+    <ul>
+    <li><code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-1e0mh5rk">ya360_security:service_applications_read</code> — чтение списка сервисных приложений;</li>
+    <li><code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-4zu7if5h">ya360_security:service_applications_write</code> — управление списком сервисных приложений (чтение и запись).</li>
+    </ul>
+
+    <a href="https://yandex.ru/dev/api360/doc/ru/ref/ServiceApplicationsService/">Перейти в Справочник</a>
+  type: text/markdown

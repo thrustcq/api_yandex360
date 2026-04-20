@@ -1,0 +1,21 @@
+info:
+  name: DNS
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit
+
+docs:
+  content: |-
+    <h2>DNS</h2>
+
+    <p>С помощью запросов управления DNS пользователь может редактировать DNS-записи домена, делегированного на серверы Яндекс.</p>
+    <p>Если домен не делегирован, запросы можно использовать для добавления нужных DNS-записей для домена на серверах Яндекса для дальнейшего его делегирования.</p>
+    <p>Права для работы с DNS:</p>
+    <ul>
+    <li><code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-fzk7ebs8">directory:manage_dns</code> — управление DNS (чтение и запись).</li>
+    </ul>
+
+    <a href="https://yandex.ru/dev/api360/doc/ru/ref/DomainDNSService/">Перейти в Справочник</a>
+  type: text/markdown

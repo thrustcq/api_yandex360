@@ -1,0 +1,15 @@
+info:
+  name: Активировать функцию
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{base_url}}/security/v1/org/{{orgId}}/service_applications/activate"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

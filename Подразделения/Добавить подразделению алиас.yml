@@ -1,0 +1,21 @@
+info:
+  name: Добавить подразделению алиас
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{base_url}}/directory/v1/org/{{orgId}}/departments/{{departmentId}}/aliases"
+  body:
+    type: json
+    data: |-
+      {
+        "alias": "example" // Алиас почтовой рассылки подразделения
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

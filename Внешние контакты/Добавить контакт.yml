@@ -1,0 +1,42 @@
+info:
+  name: Добавить контакт
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/directory/v1/org/{{orgId}}/external_contacts"
+  body:
+    type: json
+    data: |-
+      {
+        "firstName": "example", // Имя
+        "lastName": "example", // Фамилия
+        "middleName": "example", // Отчество
+        "title": "example", // Должность
+        "company": "example", // Компания
+      //  "department": "example", // Подразделение
+      //  "address": "example", // Почтовый адрес
+      //  "externalId": "example", // Произвольный внешний идентификатор
+        "emails": [ // Массив электронных адресов
+          {
+            "email": "email@example.com", // Электронный адрес
+            "type": "work", // Тип электронного адреса
+            "main": true // Признак основного электронного адреса
+          }
+        ]
+      //  "phones": [ // Телефоны
+      //    {
+      //      "phone": "example", // Телефон
+      //      "type": "example", // Тип телефона
+      //      "main": true // Признак основного телефона
+      //    }
+      //  ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

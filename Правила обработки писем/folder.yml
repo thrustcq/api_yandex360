@@ -1,0 +1,53 @@
+info:
+  name: Правила обработки писем
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit
+
+docs:
+  content: |-
+    <h2>Правила обработки писем</h2>
+
+    <p>Инструмент для управления потоками входящей и исходящей почты: администратор создает правила обработки писем, которые действуют на уровне домена и имеют приоритет над аналогичными правилами, заданными пользователями.</p>
+    <p>Права доступа, необходимые приложению для работы с правилами:</p>
+    <ul>
+    <li><code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-uh0jkybw">ya360_admin:mail_write_routing_rules</code> — просмотр и изменение;</li>
+    <li><code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-mpijvny4">ya360_admin:mail_read_routing_rules</code> — просмотр.</li>
+    </ul>
+    <h4 id="terminy"><a href="ru/ref/RoutingService/#terminy" class="yfm-anchor yfm-clipboard-anchor" aria-hidden="true"></a>Термины</h4>
+    <p><strong>Правило</strong> обработки писем — инструкция, которая описывает, какое <em><strong>Действие</strong></em> нужно выполнить с письмом при выполнении <em><strong>Условия</strong></em>.</p>
+    <p><strong>Действие</strong> — операция над письмом.</p>
+    <p>Возможные значения:</p>
+    <ul>
+    <li>drop — не доставлять письмо;</li>
+    <li>forward — переслать письмо.</li>
+    </ul>
+    <p><strong>Условие</strong> — алгоритм проверки письма. Описание простых и составных условий приведено в разделе <a href="https://yandex.ru/dev/api360/doc/ru/routing">Описание параметра conditions.</p>
+    <h4 id="poryadok-raboty"><a href="ru/ref/RoutingService/#poryadok-raboty" class="yfm-anchor yfm-clipboard-anchor" aria-hidden="true"></a>Порядок работы</h4>
+    <p>Правило обработки писем, настроенное через API, применяется либо к входящей почте, либо к исходящей. Это регулируется параметром <code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-npdey84g">direction</code> запроса на создание правила.
+    В зависимости от этого параметра каждое поступающее или отправляемое письмо проверяется на соответствие условию, например, по наличию в теме или заголовке письма определенных слов, по названию вложения, по адресу отправителя.
+    Если соответствие установлено, то производится одно из действий:</p>
+    <ul>
+    <li>доставка письма не производится;</li>
+    <li>письмо пересылается на заданный адрес.</li>
+    </ul>
+    <h4 id="osobennosti"><a href="ru/ref/RoutingService/#osobennosti" class="yfm-anchor yfm-clipboard-anchor" aria-hidden="true"></a>Особенности</h4>
+    <p>Правила обработки писем распространяются только на сотрудников с аккаунтами на домене организации. На остальных пользователей, например владельца организации с почтой вида <code class="yfm-clipboard-inline-code" role="button" aria-label="Блок кода" aria-description="Чтобы скопировать текст внутри блока нажмите на блок" tabindex='0' id="inline-code-id-89a2eud0">login@yandex.ru</code> или приглашенных пользователей с аккаунтами на Яндексе, правила не действуют.</p>
+    <h4 id="primery-pravil"><a href="ru/ref/RoutingService/#primery-pravil" class="yfm-anchor yfm-clipboard-anchor" aria-hidden="true"></a>Примеры правил</h4>
+    <p>Для входящей почты:</p>
+    <ul>
+    <li>пересылка всей входящей почты одного сотрудника другому сотруднику;</li>
+    <li>установка запрета написания писем на какой-либо адрес всем, кроме конкретных пользователей.</li>
+    </ul>
+    <p>Для исходящей почты:</p>
+    <ul>
+    <li>запрет на отправку писем на конкретные адреса;</li>
+    <li>пересылка писем с определенной темой на заданный адрес.</li>
+    </ul>
+    <p>Правила обработки писем также позволяют устанавливать запрет всем сотрудникам на получение писем от конкретного отправителя.
+    Однако задавать черные списки отправителей лучше через настройку списка запрещенных и разрешенных отправителей. <a href="https://yandex.ru/dev/api360/doc/ru/ref/DomainPolicies/">Описание метода по работе со списком</a>.</p>
+
+    <a href="https://yandex.ru/dev/api360/doc/ru/ref/RoutingService/">Перейти в Справочник</a>
+  type: text/markdown

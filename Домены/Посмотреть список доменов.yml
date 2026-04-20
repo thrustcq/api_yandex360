@@ -1,0 +1,24 @@
+info:
+  name: Посмотреть список доменов
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{base_url}}/directory/v1/org/{{orgId}}/domains"
+  params:
+    - name: page
+      value: "2"
+      type: query
+      disabled: true
+    - name: perPage
+      value: "1"
+      type: query
+      disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

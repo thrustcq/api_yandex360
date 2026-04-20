@@ -1,0 +1,21 @@
+info:
+  name: Изменить время жизни cookie сессии
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/security/v1/org/{{orgId}}/domain_sessions"
+  body:
+    type: json
+    data: |-
+      {
+        "authTTL": 0 // Время в секундах, по истечении которого cookie сессии пользователей завершаются
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

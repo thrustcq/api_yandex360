@@ -1,0 +1,18 @@
+info:
+  name: Установить запрет на авторизацию во внешних OAuth-сервисах
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/security/v1/org/{{orgId}}/oauth_access_restriction"
+  body:
+    type: json
+    data: "{}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

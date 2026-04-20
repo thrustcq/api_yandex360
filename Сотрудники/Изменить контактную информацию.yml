@@ -1,0 +1,32 @@
+info:
+  name: Изменить контактную информацию
+  type: http
+  seq: 10
+
+http:
+  method: PUT
+  url: "{{base_url}}/directory/v1/org/{{orgId}}/users/{{userId}}/contacts"
+  body:
+    type: json
+    data: |-
+      {
+        "contacts": [ // Контакты сотрудника
+          {
+            "type": "email", // Тип контакта
+            "value": "email@example.com", // Значение контакта
+            "label": "example" // Произвольная метка контакта
+          }
+      //    {
+      //      "type": "example",
+      //      "value": "example",
+      //      "label": "example"
+      //    }
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

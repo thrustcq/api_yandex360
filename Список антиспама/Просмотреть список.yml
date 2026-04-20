@@ -1,0 +1,15 @@
+info:
+  name: Просмотреть список
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{base_url}}/admin/v1/org/{{orgId}}/mail/antispam/allowlist/ips"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

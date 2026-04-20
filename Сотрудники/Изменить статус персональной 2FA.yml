@@ -1,0 +1,20 @@
+info:
+  name: Изменить статус персональной 2FA
+  type: http
+  seq: 13
+
+http:
+  method: PATCH
+  url: "{{base_url}}/directory/v1/org/{{orgId}}/users/{{userId}}/domain_2fa"
+  params:
+    - name: is2faEnabled
+      value: "true"
+      type: query
+      disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

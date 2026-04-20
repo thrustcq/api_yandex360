@@ -1,0 +1,17 @@
+info:
+  name: Посмотреть настройки почты
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{cloud_url}}/v1/admin/org/{{orgId}}/mail-settings"
+  headers:
+    - name: Authorization
+      value: OAuth {{oauth_token}}
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

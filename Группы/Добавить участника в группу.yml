@@ -1,0 +1,22 @@
+info:
+  name: Добавить участника в группу
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{base_url}}/directory/v1/org/{{orgId}}/groups/{{groupId}}/members"
+  body:
+    type: json
+    data: |-
+      {
+        "type": "user", // Тип участника группы
+        "id": "1234567890123456" // Идентификатор участника группы
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
